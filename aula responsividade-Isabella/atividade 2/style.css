@@ -1,0 +1,92 @@
+.container{
+    display: flex; /*Ativa o flexbox para organizar os elementos filhos em linha*/
+    flex-wrap: wrap;/*faz os itens quebrarem para a proxima linha quando não couberem na tela*/
+    justify-content: space-between;/*Distribui os itens e deixa espaço igual entre eles*/
+    padding: 0px;/*Espaçamento Interno em todos os lados das divas (filhos)*/
+    max-width: 1200;/*define uma largura maxima do container */
+    margin: 0 auto; /*centraliza o container horizontalmente na tela*/
+}
+.Fotos{
+    width: 30%; /*cada foto ocupa ate 30% largura do containder
+    (div pai)*/
+    background-color: rgb(164, 116, 116);
+    border: 4px solid #ddd;
+    padding: 20px;/*espaçamento interno para afastar o conteudo da borda*/
+    margin-bottom: 20px;/*espaçamento de baixo de cada polaroid*/
+    display: flex;/*torna o container flexivel*/
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Fotos img{
+    width: 100%;/*faz a imagem ocupar toda a largura do produto*/
+    height: auto;/*ajusta a altura prporcionalmente para não distorcer o mozão*/
+}
+h1{
+    margin: 0;
+    text-align: center;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.Fotos h2{
+    margin: 0;
+    text-align: center;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.Fotos p{
+     margin: 0;
+    text-align: center;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Padrão: 4 colunas (desktop) */
+  gap: 16px;
+  padding: 16px;
+}
+
+.search-bar {
+  flex: 1;
+  max-width: 500px;/*largura da barra*/
+  display: flex;
+  margin: 0 30px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #a7a3a3;/*cor da borda barra e tamanho da cor*/
+  border-right: none;
+  border-radius: 25px 0 0 25px;
+}
+
+.search-bar button {/*barra de pesquisa*/
+  padding: 10px 15px;/*tamanho da barra*/
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #e8dddd;
+  border-radius: 0 25px 25px 0;/*borda da barra*/
+}
+
+
+/* Tablet: 2 colunas */
+@media (max-width: 768px) {
+  .container {
+   flex-direction: column;
+   display: flex;
+  }
+  .Fotos{
+    flex-direction: column;
+  }
+}
+
+/* Celular: 1 coluna */
+@media (max-width: 834px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
